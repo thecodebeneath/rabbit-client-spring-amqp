@@ -17,12 +17,12 @@ public class Tut4Sender {
 
     private int count;
 
-    private final String[] keys = {"orange", "black", "green"};
+    private final String[] keys = {"orange", "black", "green", "white", "red"};
 
     @Scheduled(fixedDelay = 1000, initialDelay = 500)
     public void send() {
         StringBuilder builder = new StringBuilder("Hello to ");
-        if (++this.index == 3) {
+        if (++this.index == keys.length) {
             this.index = 0;
         }
         String key = keys[this.index];
